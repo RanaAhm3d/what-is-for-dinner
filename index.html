@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's For Dinner</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="css/all.min.css" />
+  </head>
+
+  <body>
+    <!-- header start  -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid container-lg px-md-5 py-1">
+          <div
+            class="navbar-brand d-flex align-items-center justify-content-center flex-row gap-3"
+          >
+            <div
+              class="navbar-icon icon-12 d-flex align-items-center justify-content-center rounded-circle"
+            >
+              <i class="fa-solid fa-utensils text-white"></i>
+            </div>
+            <div class="navbar-title">
+              <h1 class="fs-4 text-black fw-bold mb-0">What's For Dinner</h1>
+              <p class="text-muted fs-6">Your daily meal inspiration</p>
+            </div>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div
+              class="icons d-flex flex-column flex-lg-row align-items-lg-center ms-auto p-2 p-lg-0"
+            >
+              <div class="nav-line"></div>
+              <div class="d-flex flex-row gap-1 align-items-center">
+                <i class="fa-solid fa-bookmark text-base"></i>
+                <span class="d-md-none">Saved Recipes</span>
+              </div>
+              <div class="d-flex flex-row gap-1 align-items-center">
+                <i class="fa-solid fa-clock-rotate-left text-base"></i>
+                <span class="d-md-none">Recents</span>
+              </div>
+              <div class="d-flex flex-row gap-1 align-items-center">
+                <i class="fa-solid fa-gear text-base"></i>
+                <span class="d-md-none">Settings</span>
+              </div>
+              <div class="profile d-flex flex-row align-items-center gap-2">
+                <div class="profile-pic rounded-circle">
+                  <img
+                    src="images/avatar-2.jpg"
+                    class="img-fluid"
+                    alt="profile-pic"
+                  />
+                </div>
+                <span class="d-md-none">Profile</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header ends -->
+
+    <!-- main start  -->
+    <main>
+      <section class="container-lg py-5">
+        <div class="row recipe-container">
+          <div
+            id="recipe-image"
+            class="col-12 col-lg-5 p-0 h-md-100 position-relative"
+          >
+            <img
+              src="images/Pad Thai.jpg"
+              class="w-100 h-100 object-fit-cover"
+              alt=""
+            />
+            <div
+              class="badge position-absolute rounded-pill d-flex flex-row align-items-center gap-2 bg-white"
+            >
+              <i class="fa-solid fa-star text-warning"></i>
+              <p id="rating-average" class="fw-medium text-black">4.8</p>
+              <span class="text-muted fw-light"
+                >(<span id="rating-quantity">356</span> reviews)</span
+              >
+            </div>
+            <div class="badge-info bg-white position-absolute">
+              <div
+                class="d-flex flex-row align-items-center justify-content-between justify-content-md-center gap-md-5"
+              >
+                <div
+                  class="d-flex flex-column align-items-center justify-content-center"
+                >
+                  <i class="fa-solid fa-clock text-orange-500"></i>
+                  <span class="text-gray-500">Prep Time</span>
+                  <p class="fw-bold"><span id="prep-time">10</span> min</p>
+                </div>
+                <div
+                  class="d-flex flex-column align-items-center justify-content-center"
+                >
+                  <i class="fa-solid fa-fire-burner text-red-500"></i>
+                  <span class="text-gray-500">Cook Time</span>
+                  <p class="fw-bold"><span id="cook-time">15</span> min</p>
+                </div>
+                <div
+                  class="d-flex flex-column align-items-center justify-content-center"
+                >
+                  <i class="fa-solid fa-users text-blue-500"></i>
+                  <span class="text-gray-500">Servings</span>
+                  <p class="fw-bold">
+                    <span id="servings-time">2</span> people
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-7 p-0">
+            <div class="recipe-info">
+              <div
+                class="d-flex flex-column gap-3 flex-md-row gap-md-0 align-items-md-center flex-md-row-reverse justify-content-md-between mb-24"
+              >
+                <div class="d-flex flex-row justify-content-end gap-3">
+                  <div
+                    class="icon-12 d-flex align-items-center justify-content-center rounded-2 bg-orange-100"
+                  >
+                    <i class="fa-solid fa-bookmark text-orange-600"></i>
+                  </div>
+                  <div
+                    class="icon-12 d-flex align-items-center justify-content-center rounded-2 bg-orange-100"
+                  >
+                    <i class="fa-solid fa-share-nodes text-orange-600"></i>
+                  </div>
+                </div>
+                <div class="d-flex flex-column">
+                  <div class="d-flex flex-row gap-3">
+                    <div class="badges bg-green-100 rounded-pill">
+                      <span class="text-green-700 fw-bold" id="difficulty-badge"
+                        >Intermediate
+                      </span>
+                    </div>
+                    <div class="badges bg-blue-100 rounded-pill">
+                      <span class="text-blue-700 fw-bold" id="category-badge"
+                        >Asian</span
+                      >
+                    </div>
+                  </div>
+                  <h3 id="recipe-name" class="fw-bold pt-3">Pad Thai</h3>
+                  <p id="recipe-description" class="text-base">
+                    Popular Thai stir-fried noodles with shrimp and peanuts
+                  </p>
+                </div>
+              </div>
+              <div id="time-warning" class="d-none">
+                <div class="inner">
+                  <div class="d-flex flex-row align-items-center">
+                    <i class="fa-solid fa-warning me-2"></i>
+                    <div class="d-flex flex-column">
+                      <p class="mb-0">Extended Preparation Time</p>
+                      <span>
+                        This recipe requires more than 45 minutes to prepare.
+                        Plan accordingly!
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul
+                class="nav nav-pills mb-3 justify-content-between flex-md-wrap w-100 justify-content-md-center"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link d-flex flex-row active"
+                    id="pills-ingredients-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-ingredients"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-ingredients"
+                    aria-selected="true"
+                  >
+                    <i class="fa-solid fa-list-check me-2"></i>
+                    <span class="full-text d-none d-md-inline"
+                      >Ingredients</span
+                    >
+                    <span class="short-text d-inline d-md-none">Ing...</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link d-flex flex-row"
+                    id="pills-instructions-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-instructions"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-instructions"
+                    aria-selected="false"
+                  >
+                    <i class="fa-solid fa-book-open me-2"></i>
+                    <span class="full-text d-none d-md-inline"
+                      >Instructions</span
+                    >
+                    <span class="short-text d-inline d-md-none">Ins...</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link d-flex flex-row"
+                    id="pills-nutrition-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-nutrition"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-nutrition"
+                    aria-selected="false"
+                  >
+                    <i class="fa-solid fa-chart-pie me-2"></i>
+                    <span class="full-text d-none d-md-inline">Nutrition</span>
+                    <span class="short-text d-inline d-md-none">Nut...</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link d-flex flex-row"
+                    id="pills-chef-tips-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-chef-tips"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-chef-tips"
+                    aria-selected="false"
+                  >
+                    <i class="fa-solid fa-lightbulb me-2"></i>
+                    <span class="full-text d-none d-md-inline"
+                      >Chef's Tips</span
+                    >
+                    <span class="short-text d-inline d-md-none">Chef's...</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-ingredients"
+                  role="tabpanel"
+                  aria-labelledby="pills-ingredients-tab"
+                  tabindex="0"
+                >
+                  <div class="ingredients-inner">
+                    <ul id="ingredients-list" class="list-unstyled">
+                      <li><span>1</span> 200g rice noodles</li>
+                      <li><span>2</span>200g shrimp, peeled</li>
+                      <li><span>3</span>2 eggs</li>
+                      <li><span>4</span>3 tablespoons tamarind paste</li>
+                      <li><span>5</span> 2 tablespoons fish sauce</li>
+                      <li><span>6</span> 1 tablespoon palm sugar</li>
+                      <li><span>7</span> Bean sprouts</li>
+                      <li><span>8</span> Crushed peanuts</li>
+                      <li><span>9</span>Lime wedges and cilantro</li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-instructions"
+                  role="tabpanel"
+                  aria-labelledby="pills-instructions-tab"
+                  tabindex="0"
+                >
+                  <div class="instructions-inner">
+                    <ul id="instructions-list" class="list-unstyled">
+                      <li>
+                        <span>1</span> Soak rice noodles in warm water for 30
+                        minutes. Drain and set aside.
+                      </li>
+                      <li>
+                        <span>2</span> Mix tamarind paste, fish sauce, and palm
+                        sugar to make the sauce.
+                      </li>
+                      <li>
+                        <span>3</span>Heat wok over high heat. Scramble eggs and
+                        set aside.
+                      </li>
+                      <li>
+                        <span>4</span> Cook shrimp until pink. Add noodles and
+                        sauce, toss for 2-3 minutes.
+                      </li>
+                      <li>
+                        <span>5</span> Add scrambled eggs and bean sprouts. Toss
+                        everything together.
+                      </li>
+                      <li>
+                        <span>6</span>Serve topped with crushed peanuts, lime
+                        wedges, and cilantro.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-nutrition"
+                  role="tabpanel"
+                  aria-labelledby="pills-nutrition-tab"
+                  tabindex="0"
+                >
+                  <div class="nutrition-inner">
+                    <div class="row g-3">
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner d-flex flex-row align-items-center justify-content-between"
+                        >
+                          <div class="d-flex flex-row align-items-center gap-2">
+                            <div class="icon bg-orange-100">
+                              <i
+                                ><i class="fa-solid fa-fire text-orange-600"></i
+                              ></i>
+                            </div>
+                            <span class="name">Calories</span>
+                          </div>
+                          <span id="calories-value" class="value fw-bold"
+                            >500 kcal</span
+                          >
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner d-flex flex-row align-items-center justify-content-between"
+                        >
+                          <div class="d-flex flex-row align-items-center gap-2">
+                            <div class="icon bg-blue-100">
+                              <i
+                                ><i
+                                  class="fa-solid fa-dumbbell text-blue-600"
+                                ></i
+                              ></i>
+                            </div>
+                            <span class="name">Protein</span>
+                          </div>
+                          <span id="protein-value" class="value fw-bold"
+                            >32g</span
+                          >
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner d-flex flex-row align-items-center justify-content-between"
+                        >
+                          <div class="d-flex flex-row align-items-center gap-2">
+                            <div class="icon bg-yellow-100">
+                              <i
+                                ><i
+                                  class="fa-solid fa-wheat-awn text-yellow-600"
+                                ></i
+                              ></i>
+                            </div>
+                            <span class="name">Carbohydrates</span>
+                          </div>
+                          <span id="carbohydrates-value" class="value fw-bold"
+                            >62g</span
+                          >
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner d-flex flex-row align-items-center justify-content-between"
+                        >
+                          <div class="d-flex flex-row align-items-center gap-2">
+                            <div class="icon bg-red-100">
+                              <i
+                                ><i class="fa-solid fa-droplet text-red-600"></i
+                              ></i>
+                            </div>
+                            <span class="name">Fat</span>
+                          </div>
+                          <span id="fat-value" class="value fw-bold">16g</span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner d-flex flex-row align-items-center justify-content-between"
+                        >
+                          <div class="d-flex flex-row align-items-center gap-2">
+                            <div class="icon bg-green-100">
+                              <i
+                                ><i
+                                  class="fa-solid fa-seedling text-green-600"
+                                ></i
+                              ></i>
+                            </div>
+                            <span class="name">Fiber</span>
+                          </div>
+                          <span id="fiber-value" class="value fw-bold">4g</span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner d-flex flex-row align-items-center justify-content-between"
+                        >
+                          <div class="d-flex flex-row align-items-center gap-2">
+                            <div class="icon bg-pink-100">
+                              <i
+                                ><i class="fa-solid fa-cube text-pink-600"></i
+                              ></i>
+                            </div>
+                            <span class="name">Sodium</span>
+                          </div>
+                          <span id="sodium-value" class="value fw-bold"
+                            >1120mg</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-chef-tips"
+                  role="tabpanel"
+                  aria-labelledby="pills-chef-tips-tab"
+                  tabindex="0"
+                >
+                  <div class="chef_tips-inner">
+                    <ul id="tips-list" class="list-unstyled">
+                      <li class="d-flex flex-row align-items-center">
+                        <div
+                          class="icon d-flex align-items-center justify-content-center"
+                        >
+                          <i class="fa-solid fa-check text-white"></i>
+                        </div>
+                        <span class="mb-1"
+                          >Don't oversoak noodles or they'll be mushy</span
+                        >
+                      </li>
+                      <li class="d-flex flex-row align-items-center">
+                        <div
+                          class="icon d-flex align-items-center justify-content-center"
+                        >
+                          <i class="fa-solid fa-check text-white"></i>
+                        </div>
+                        <span class="mb-1"
+                          >Cook on high heat for authentic wok flavor</span
+                        >
+                      </li>
+                      <li class="d-flex flex-row align-items-center">
+                        <div
+                          class="icon d-flex align-items-center justify-content-center"
+                        >
+                          <i class="fa-solid fa-check text-white"></i>
+                        </div>
+                        <span class="mb-1"
+                          >Balance sweet, sour, and salty flavors</span
+                        >
+                      </li>
+                      <li class="d-flex flex-row align-items-center">
+                        <div
+                          class="icon d-flex align-items-center justify-content-center"
+                        >
+                          <i class="fa-solid fa-check text-white"></i>
+                        </div>
+                        <span class="mb-1"
+                          >Prepare all ingredients before starting to cook</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="line"></div>
+              <button id="try-btn" class="btn btn-section">
+                <i class="fa-solid fa-rotate me-2"></i
+                ><span class="fw-bold">Try Another Recipe</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- main ends -->
+
+    <!-- Scripts -->
+    <!-- bootstrap script  -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- js script  -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
